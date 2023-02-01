@@ -9,6 +9,10 @@ import (
 func main() {
 	//长度计算
 	//如果你想知道一个字符串(中文)长度， 如果你只有英文，这个时候直接len
+	//英文
+	englist := "imooc"
+	fmt.Println(len(englist))
+	//中文
 	name := "imooc体系课学习"
 	bytes := []rune(name)
 	fmt.Println(len(bytes))
@@ -45,4 +49,28 @@ func main() {
 
 	re := builder.String()
 	fmt.Println(re)
+
+
+	// 示例1。
+	var builder1 strings.Builder
+	builder1.WriteString("A Builder is used to efficiently build a string using Write methods.")
+	fmt.Printf("The first output(%d):\n%q\n", builder1.Len(), builder1.String())
+	fmt.Println()
+	builder1.WriteByte(' ')
+	builder1.WriteString("It minimizes memory copying. The zero value is ready to use.")
+	builder1.Write([]byte{'\n', '\n'})
+	builder1.WriteString("Do not copy a non-zero Builder.")
+	fmt.Printf("The second output(%d):\n\"%s\"\n", builder1.Len(), builder1.String())
+	fmt.Println()
+
+	// 示例2。
+	fmt.Println("Grow the builder ...")
+	builder1.Grow(10)
+	fmt.Printf("The length of contents in the builder is %d.\n", builder1.Len())
+	fmt.Println()
+
+	// 示例3。
+	fmt.Println("Reset the builder ...")
+	builder1.Reset()
+	fmt.Printf("The third output(%d):\n%q\n", builder1.Len(), builder1.String())
 }
