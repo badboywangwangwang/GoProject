@@ -9,10 +9,6 @@ import (
 func main() {
 	//长度计算
 	//如果你想知道一个字符串(中文)长度， 如果你只有英文，这个时候直接len
-	//英文
-	englist := "imooc"
-	fmt.Println(len(englist))
-	//中文
 	name := "imooc体系课学习"
 	bytes := []rune(name)
 	fmt.Println(len(bytes))
