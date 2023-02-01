@@ -60,6 +60,13 @@ func main() {
 	fmt.Println(floatStr)
 
 	fmt.Println(strconv.FormatInt(42, 16))
+	
+	// int转字符串
+	var intss int = 9
+	intstr := strconv.Itoa(intss)
+	fmt.Println(intss)
 
-	fmt.Println(reflect.TypeOf(floatStr))
+	//打印数据类型
+	fmt.Println(reflect.TypeOf(intstr))
+
 }
