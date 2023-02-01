@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 	"strconv"
 )
 
@@ -59,4 +60,6 @@ func main() {
 	fmt.Println(floatStr)
 
 	fmt.Println(strconv.FormatInt(42, 16))
+
+	fmt.Println(reflect.TypeOf(floatStr))
 }
